@@ -6,7 +6,7 @@
 	<groupId>com</groupId>
 	<artifactId>TP_ESEO_Server_maven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>tp_serveur_maven</name>
 	<description>Demo project for API REST</description>
@@ -73,8 +73,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+				<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				
+			</plugin>
 		</plugins>
 	</build>
 
 
+	<modules>
+		<module>TP_ESEO_Client_maven</module>
+	</modules>
 </project>

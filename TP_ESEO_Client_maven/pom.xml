@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com</groupId>
+    <artifactId>TP_ESEO_Server_maven</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>TP_ESEO_Client_maven</artifactId>
+  <name>tp_eseo_client</name>
+  <description>tp</description>
+  <groupId>sub_com</groupId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>com</groupId>
+  		<artifactId>TP_ESEO_Server_maven</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>pom</type>
+  	</dependency>
+  </dependencies>
+</project>

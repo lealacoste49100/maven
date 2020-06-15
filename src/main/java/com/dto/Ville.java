@@ -52,7 +52,7 @@ public class Ville {
 	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
-	
+		
 	
 
 }

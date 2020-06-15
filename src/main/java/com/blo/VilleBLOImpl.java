@@ -23,10 +23,37 @@ public class VilleBLOImpl implements VilleBLO {
 		return listeville;
 	}
 	
-	public void ajouterVille(String codePostal, String codeCommune, String nomCommune, String libelle, String ligne, String longitude, String latitude) {
-		
-		//TODO dao
-		villeDAO.ajouterVille(codePostal,codeCommune,nomCommune,libelle,ligne,longitude,latitude);
-		
+
+	@Override
+	public void creerVille(Ville ville) {
+		villeDAO.setVille(ville);
+	}
+	
+	@Override
+	public ArrayList<Ville> getVille(String codePostal) {
+		ArrayList<Ville> ville;
+		ville = villeDAO.getVille(codePostal);
+		return ville;
+	}
+	
+	@Override
+	public Ville getVilleCode(String codeCommune) {
+		Ville ville;
+		ville = villeDAO.getVilleCode(codeCommune);
+		return ville;
+	}
+	
+	@Override
+	public boolean updateVille(Ville ville) {
+		boolean result;
+		result = villeDAO.updateVille(ville);
+		return result;
+	}
+	
+	@Override
+	public boolean deleteVille(String codeCommune) {
+		boolean result;
+		result = villeDAO.deleteVille(codeCommune);
+		return result;
 	}
 }
