@@ -83,7 +83,5 @@
 	</build>
 
 
-	<modules>
-		<module>TP_ESEO_Client_maven</module>
-	</modules>
+	
 </project>
