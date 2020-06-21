@@ -123,10 +123,14 @@ public class VilleDAOImpl implements VilleDAO {
 		try {
 			Connection con = JDBCConfiguration.getConnection();
 			Statement stmt = con.createStatement();
+			String ok = "UPDATE ville_france SET Code_postal='"+ville.getCodePostal()+"',Nom_commune='"+ville.getNomCommune()+"',Libelle_acheminement='"+ville.getLibelle()+
+					"',Code_commune_INSEE='"+ville.getCodeComune()+"',Ligne_5='"+ville.getLigne()+"',Longitude='"+ville.getLongitude()+"',Latitude='"+ville.getLatitude()+
+					"' WHERE Code_commune_INSEE='"+ville.getCodeComune()+"'";
+			System.out.println(ok);
 			resultat = stmt.executeUpdate(
-					"UPDATE ville_france SET Code_postal="+ville.getCodePostal()+",Nom_commune='"+ville.getNomCommune()+"',Libelle_acheminement='"+ville.getLibelle()+
-					"',Code_commune_INSEE="+ville.getCodeComune()+",Ligne_5="+ville.getLigne()+",Longitude="+ville.getLongitude()+",Latitude="+ville.getLatitude()+
-					"WHERE Code_commune_INSEE="+ville.getCodeComune());
+					 "UPDATE ville_france SET Code_postal='"+ville.getCodePostal()+"',Nom_commune='"+ville.getNomCommune()+"',Libelle_acheminement='"+ville.getLibelle()+
+						"',Code_commune_INSEE='"+ville.getCodeComune()+"',Ligne_5='"+ville.getLigne()+"',Longitude='"+ville.getLongitude()+"',Latitude='"+ville.getLatitude()+
+						"' WHERE Code_commune_INSEE='"+ville.getCodeComune()+"'");
 			stmt.close();
 			con.close();
 			return true;
